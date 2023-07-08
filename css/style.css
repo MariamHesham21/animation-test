@@ -68,7 +68,7 @@
 .text{
     background-color: #fff;
     width:500px;
-    height:400px;
+    height:450px;
     position: absolute;
     border-radius: 10px;
     outline: 3px solid #f7f3ef;
@@ -91,20 +91,58 @@
 }
 .icons{
     display: flex;
-    justify-content: space-evenly;
-    margin: 30px auto 0 auto;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 21px 20px;
 }
 .icons i{
     cursor: pointer;
-    font-size: 25px;
+    font-size: 20px;
     padding-bottom: 5px;
     border-bottom:5px solid #f7f3ef;
+    position: relative;
 }
-.icons i:hover{
+.fa-location-dot,.fa-mountain-sun{
+    left: 390px;
+}
+.fa-plane{
+    animation:runtoleft 2s 5s  forwards;
+}
+.fa-location-dot{
+    animation:runtoright 2s 6s  forwards;
+}
+.fa-hotel{
+    animation:runtoleft 2s 7s  forwards;
+}
+.fa-mountain-sun{
+    animation:runtoright 2s 8s  forwards;
+}
+@keyframes runtoleft{
+    0%{
+        left: 0;
+        color: #333;
+    }
+    100%{
+        left: 400px;
+        color: #85A389;
+    }
+}
+@keyframes runtoright{
+    0%{
+        left: 390;
+        color: #333;
+    }
+    100%{
+        left: 0px;
+        color: #468B97;
+    }
+}
+/* .icons i:hover{
     color: #d1cdc9;
     border-bottom:5px solid #333;
 
-}
+} */
 
 
 
